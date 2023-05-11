@@ -19,4 +19,13 @@ def devolver(request):
     pagina_html = HttpResponse(devolucion)
     print("Devolución completada")
     return pagina_html
+   
+def saludar_con_html(request):
+    contexto = {}
+    http_responde = render(
+        request=request,
+        template_name ='productos/base.html',
+        context=contexto,
+    )
+    return HttpResponse
     
