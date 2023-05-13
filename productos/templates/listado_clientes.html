@@ -1,0 +1,14 @@
+{% extends "productos/base.html" %}
+
+{% block contenido %}
+<section>
+    <div>
+        <h1>Lista de clientes </h1>
+        <ul>
+            {% for cliente in clientes %}
+            <li> {{cliente.nombre}}, {{cliente.apellido}}</li>
+            {%endfor%}
+        <ul>
+    </div>
+</section>
+{% endblock contenido %}

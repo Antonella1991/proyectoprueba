@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-def listar_estudiantes(request):
+def listar_productos(request):
     contexto = {
         "productos": [
             {"nombre":"jarra de agua", "modelo":"amazon basics"},
@@ -11,6 +11,22 @@ def listar_estudiantes(request):
     http_responde = render(
         request=request,
         template_name='productos/lista_productos.html',
+        contexto=contexto,
+    )
+    return http_responde
+
+
+def listar_clientes(request):
+    contexto = {
+        "clientes": [
+            {"nombre":"Antonella", "modelo":"Sardi"},
+            {"nombre":"David", "modelo":"Escudero"},
+            {"nombre":"Gisela", "modelo":"Merlinez"},
+        ]
+    }
+    http_responde = render(
+        request=request,
+        template_name='productos/listar_clientes.html',
         contexto=contexto,
     )
     return http_responde

@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from proyecto3.views import saludar, comprar, devolver, saludar_con_html
+from productos.views import listar_productos, listar_clientes
 #from productos.views import listar_productos (aun no creada def)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +27,8 @@ urlpatterns = [
     path('compra/', comprar),
     path('devolucion/', devolver),
     path('saludo-html/', saludar_con_html),
+    path('listado-productos/', listar_productos),
+    path('listado-clientes/', listar_clientes),
+
     #path('seccion/productos/', listar_productos)
 ]
